@@ -2,6 +2,20 @@ POST http://localhost:3001/api/notes HTTP/1.1
 content-type: application/json
 
 {
-    "content": "test",
+    "content": "Anotha banga",
+    "important": true
+}
+
+###
+
+DELETE http://localhost:3001/api/notes/638cfdf8552a4dbd06f92ca9
+###
+
+###
+PUT http://localhost:3001/api/notes/638cfd7c552a4dbd06f92ca4 HTTP/1.1
+content-type: application/json
+
+{
+    "content": "Anotha banga",
     "important": true
 }
