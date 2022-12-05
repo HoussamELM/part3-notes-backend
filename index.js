@@ -42,7 +42,7 @@ app.post('/api/notes', (request, response, next) => {
   note.save().then(savedNote => {
     response.json(savedNote)
   })
-  .catch(error => next(error))
+    .catch(error => next(error))
 })
 
 app.get('/api/notes', (request, response) => {
@@ -53,26 +53,24 @@ app.get('/api/notes', (request, response) => {
 
 app.get('/api/notes/:id', (request, response, next) => {
   Note.findById(request.params.id)
-  .then(note => {
-    if (note) {
-      response.json(note)
-    } else {
-      response.status(404).end()
-    }
-  })
-  .catch(error => next(error))
-})
-
-app.delete('/api/notes/:id', (request, response, next) => {
-  Note.findByIdAndRemove(request.params.id)
-    .then(result => {
-      response.status(204).end()
+    .then(note => {
+      if (note) {
+        response.json(note)
+      } else {
+        response.status(404).end()
+      }
     })
     .catch(error => next(error))
 })
 
+app.delete('/api/notes/:id', (request, response, next) => {
+  Note.findByIdAndRemove(request.params.id)
+    .then(response.status(204).end())
+    .catch(error => next(error))
+})
+
 app.put('/api/notes/:id', (request, response, next) => {
-  const { content, important } = request.body 
+  const { content, important } = request.body
 
 
   Note.findByIdAndUpdate(request.params.id, { content, important }, { new: true, runValidators: true, context: 'query' })
