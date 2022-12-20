@@ -2,8 +2,9 @@ POST http://localhost:3001/api/notes HTTP/1.1
 content-type: application/json
 
 {
-    "content": "Anotha banga",
-    "important": true
+    "content": "Note to self: you fucking rock",
+    "important": true,
+    "userId": "63a0455b07e5d50e2415aeeb"
 }
 
 ###
