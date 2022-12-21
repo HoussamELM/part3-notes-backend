@@ -1,10 +1,10 @@
 POST http://localhost:3001/api/notes HTTP/1.1
 content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEiLCJpZCI6IjYzYTMzMDkyY2FmZDNmZWM4MDIzMWFiYiIsImlhdCI6MTY3MTY0NDI1Mn0.7b0hup_Ti-gZFY1zOY_b51Vo6SG6iMYc8EcLYUquKTU
 
 {
-    "content": "Note to self: you fucking rock",
+    "content": "erterek",
     "important": true,
-    "userId": "63a0455b07e5d50e2415aeeb"
 }
 
 ###
